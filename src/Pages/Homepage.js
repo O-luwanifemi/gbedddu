@@ -17,7 +17,7 @@ const Homepage = () => {
         <h1 className="text-center">What would you love to see today?</h1>
 
         <section className="cards">
-          <Link to="/yemisi/top100songs" className="carrrrd hvr-bob">
+          <Link to="/top100songs" className="carrrrd hvr-bob">
             <img src={songsCardImg} alt="top songs card" />
 
             <div className="card-body">
@@ -25,7 +25,7 @@ const Homepage = () => {
             </div>
           </Link>
 
-          <Link to="/yemisi/top100albums" className="carrrrd hvr-bob">
+          <Link to="/top100albums" className="carrrrd hvr-bob">
             <img src={albumsCardImg} alt="top albums card" />
 
             <div className="card-body">
