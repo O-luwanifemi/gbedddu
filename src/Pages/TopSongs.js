@@ -17,7 +17,7 @@ const TopSongs = () => {
   }, [dispatch])
 
   // Fetches goodies from redux store, to component
-  const top_100_songs = useSelector(state => state.songsReducer);
+  const top_100_songs = useSelector(state => state.songsReducer || []);
   const { payload, isLoading, error } = top_100_songs;
 
   // Extracts valubales from the junks of data stored in the store
@@ -55,7 +55,7 @@ const TopSongs = () => {
 
       <main id="list_section">
         {isLoading ? <Loader /> : 
-          error ? <h2>{error}</h2> :
+          error ? <h2 className="fetchError_text">{error}</h2> :
           <section className="list-group">
             <h2 className="title">{title}</h2>
 

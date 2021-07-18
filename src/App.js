@@ -1,22 +1,21 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Page404 from './Pages/404-Page.js';
-import Homepage from './Pages/Homepage.js';
-import TopAlbums from './Pages/TopAlbums.js';
-import TopSongs from './Pages/TopSongs.js';
+import Page404 from './Pages/404-Page';
+import Homepage from './Pages/Homepage';
+import TopAlbums from './Pages/TopAlbums';
+import TopSongs from './Pages/TopSongs';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route exact path="/top100songs" component={TopSongs} />
         <Route exact path="/top100albums" component={TopAlbums} />
         <Route path="*" component={Page404} />
       </Switch>
-    </BrowserRouter>
+    </Router>
   )
 }
 

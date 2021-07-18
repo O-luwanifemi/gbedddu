@@ -4,7 +4,7 @@ const NavbarWithSearch = ({ placeholder, onChange }) => {
   const [ isToggled, setIsToggled ] = useState(false);
 
   const toggleHandler = () => {
-    setIsToggled(!isToggled);
+    setIsToggled(() => !isToggled);
   }
 
   const brand_logo = "https://img.icons8.com/ios-glyphs/2x/listen-to-music.png";
@@ -23,8 +23,8 @@ const NavbarWithSearch = ({ placeholder, onChange }) => {
         </a>
       </div>
 
-      <div className="menu__container">
-        <i className="fas fa-bars" onClick={toggleHandler}></i>
+      <div className="menu__container" onClick={toggleHandler}>
+        <i className="fas fa-bars"></i>
       </div>
 
       <div className={`header__rhs ${isToggled ? "show" : null}`}>

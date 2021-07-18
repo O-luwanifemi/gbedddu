@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 
-import songsReducer from './songsReducer.js';
-import albumsReducer from './albumsReducer.js';
+import songsReducer from './songsReducer';
+import albumsReducer from './albumsReducer';
 
 export default combineReducers({
   songsReducer,
