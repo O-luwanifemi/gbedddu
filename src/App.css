@@ -21,24 +21,24 @@ body {
   overflow-x: hidden !important;
 }
 
+
+ /* H E A D E R   S E C T I O N */
 header.header {
   top: 0;
   width: 100%;
   z-index: 100;
   padding: 15px;
   display: flex;
-  flex-wrap: wrap;
-  min-height: 10vh;
   position: sticky;
   max-width: 100vw;
-  align-items: center;
+  flex-direction: column;
   background-color: #fdfdfd;
   justify-content: space-between;
   box-shadow: 0 5px 5px rgba(0, 0, 0, .05);
 }
 
 header.header .header__lhs {
-  flex: 1;
+  width: 50%;
 }
 
 header.header .header__brand {
@@ -53,26 +53,26 @@ header.header .header__brand img {
   height: 4.8rem;
 }
 
-header .header__brand h3 {
+header.header .header__brand h3 {
   font-size: 3rem;
   margin-top: 3px;
   font-weight: bold;
   font-style: italic;
 }
 
-header .menu__container {
-  display: flex;
+header.header .menu__container {
+  top: 22px;
+  right: 15px;
   cursor: pointer;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
 }
 
-header .menu__container i {
+header.header .menu__container i {
   font-size: 3.5rem;
   color: #cc3b3bf6;
 }
 
-header .header__rhs {
+header.header .header__rhs {
   display: none;
   height: 4.2rem;
   flex-basis: 100%;
@@ -81,14 +81,14 @@ header .header__rhs {
   margin: 16px 0 10px 0;
 }
 
-header .header__rhs i {
+header.header .header__rhs i {
   left: 12px;
   font-size: 2.3rem;
   position: absolute;
   color: #00000046;
 }
 
-header .header__rhs .searchField {
+header.header .header__rhs .searchField {
   height: 100%;
   display: flex;
   font-weight: 500;
@@ -100,15 +100,28 @@ header .header__rhs .searchField {
   box-shadow: 0 5px 5px rgba(0, 0, 0, .05);
 }
 
-header .header__rhs .searchField::placeholder {
+header.header .header__rhs .searchField::placeholder {
   font-weight: 500;
   font-size: 1.8rem;
   color: #00000046;
 }
 
-header .header__rhs.show {
+header.header .header__rhs.show {
   display: flex;
 }
+
+
+@media screen and (min-width: 450px) {
+  header.header {
+    background-color: khaki;
+  }
+}
+
+
+
+
+
+
 
 /*
 #list_section {
