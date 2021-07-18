@@ -49,13 +49,13 @@ header.header .header__brand {
 }
 
 header.header .header__brand img {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 4.2rem;
+  height: 4.2rem;
 }
 
 header.header .header__brand h3 {
-  font-size: 2.8rem;
   margin-top: 3px;
+  font-size: 2.5rem;
   font-weight: bold;
   font-style: italic;
 }
@@ -83,7 +83,7 @@ header.header .header__rhs {
 
 header.header .header__rhs i {
   left: 12px;
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   position: absolute;
   color: #00000046;
 }
@@ -126,34 +126,21 @@ header.header .header__rhs.show {
   }
 
   header.header .header__rhs {
-    height: 5rem;
+    height: 5.5rem;
   }
 
   header.header .header__rhs i {
     left: 15px;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 
   header.header .header__rhs .searchField {
-    height: 100%;
-    display: flex;
     font-size: 2rem;
-    font-weight: 500;
-    align-items: center;
-    border-radius: 15px;
-    padding-left: 4.2rem;
-    justify-content: center;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, .05);
+    padding-left: 4.5rem;
   }
 
   header.header .header__rhs .searchField::placeholder {
     font-size: 2rem;
-    font-weight: 500;
-    color: #00000046;
-  }
-
-  header.header .header__rhs.show {
-    display: flex;
   }
 }
 
