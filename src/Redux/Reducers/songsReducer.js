@@ -1,12 +1,16 @@
 import * as types from "../Types/types.js";
-import initialState from './reducerInitialState/initialState';
+
+const initialState = {
+  error: "",
+  payload: [],
+  isLoading: false
+}
 
 const songsReducer = (state = initialState, action) => {
   switch(action.type) {
     case types.GET_SONGSREQUEST_LOADING:
       return {
-        ...state, 
-        payload: [],
+        ...state,
         isLoading: true
       }
     case types.GET_TOP100SONGS_SUCCESS:
@@ -18,7 +22,6 @@ const songsReducer = (state = initialState, action) => {
     case types.GET_TOP100SONGS_FAIL:
       return {
         ...state,
-        payload: [],
         isLoading: false,
         error: action.data
       }

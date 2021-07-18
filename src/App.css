@@ -276,6 +276,12 @@ header .header__rhs.show {
   letter-spacing: 1px;
 }
 
+.fetchError_text {
+  margin-top: 50%;
+  color: #fff;
+  text-align: center;
+}
+
 
 
 
@@ -410,7 +416,7 @@ header .header__rhs.show {
   }
   
   header .header__rhs i {
-    top: 12.5px;
+    top: 13px;
     left: 15px;
   }
 
@@ -481,11 +487,6 @@ header .header__rhs.show {
   header .header__rhs {
     width: 400px;
     max-width: 400px;
-  }
-
-  header .header__rhs i {
-    top: 12.5px;
-    left: 15px;
   }
 
   header .header__rhs .searchField {

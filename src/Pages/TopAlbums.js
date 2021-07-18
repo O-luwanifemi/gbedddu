@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import '../App.css';
-import getAlbumsAsync from '../Redux/Actions/getAlbums.js';
-import NavbarWithSearch from '../Components/Headers/NavbarWithSearch.js';
+import getAlbumsAsync from '../Redux/Actions/getAlbums';
+import NavbarWithSearch from '../Components/Headers/NavbarWithSearch';
 import Loader from '../Components/Loading';
 
 const TopAlbums = () => {
@@ -18,19 +18,18 @@ const TopAlbums = () => {
   }, [dispatch]);
 
   // Fetches goodies from redux store, to component
-  const albumsData = useSelector(state => state.albumsReducer);
+  const albumsData = useSelector(state => state.albumsReducer || []);
   const { payload, isLoading, error } = albumsData;
 
   // Extracts valubales from the junks of data stored in the store
   useEffect(() => {
     const modifiedArr = payload.map(album => ({
-        id: album.id.attributes["im:id"],
-        album_title: album["im:name"].label,
-        artiste: album["im:artist"].label,
-        image: album["im:image"][0].label,
-        album_songs_link: album.link.attributes.href
-      })
-    )
+      id: album.id.attributes["im:id"],
+      album_title: album["im:name"].label,
+      artiste: album["im:artist"].label,
+      image: album["im:image"][0].label,
+      album_songs_link: album.link.attributes.href
+    }))
     
     setAlbums(modifiedArr);
   }, [payload])
@@ -49,11 +48,11 @@ const TopAlbums = () => {
 
   return (
     <>
-      <NavbarWithSearch placeholder="Search an album" onChange={(e) => handleChange(e)}/>
+      <NavbarWithSearch placeholder="Search an album" onChange={(e) => handleChange(e)} />
 
       <main id="list_section">
         {isLoading ? <Loader /> : 
-          error ? <h2>{error}</h2> :
+          error ? <h2 className="fetchError_text">{error}</h2> :
           <section className="list-group">
             <h2 className="title">{title}</h2>
 
