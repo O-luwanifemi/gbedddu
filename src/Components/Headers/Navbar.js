@@ -11,7 +11,7 @@ const Navbar = () => {
             className="d-inline-block align-text-center"
           />
 
-          <h3>Gbedu!</h3>
+          <h3>Gbedddu!</h3>
         </a>
       </div>
     </header>
