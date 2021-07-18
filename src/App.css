@@ -42,19 +42,20 @@ header.header .header__lhs {
 
 header.header .header__brand {
   display: flex;
-  max-width: 10em;
+  max-width: 12.2em;
   color: #cc3b3bf6;
   align-items: center;
+  background-color: deepskyblue;
 }
 
 header.header .header__brand img {
-  width: 42px;
-  height: 42px;
+  width: 4.6rem;
+  height: 4.6rem;
 }
 
 header .header__brand h3 {
   margin-top: 3px;
-  font-size: 2.5rem;
+  font-size: 3.2rem;
   font-weight: bold;
   font-style: italic;
 }
@@ -68,22 +69,22 @@ header .menu__container {
 
 header .menu__container i {
   color: #cc3b3bf6;
-  font-size: 3.1rem;
+  font-size: 3.5rem;
 }
 
 header .header__rhs {
-  height: 35px;
   display: none;
+  height: 3.8rem;
   flex-basis: 100%;
   position: relative;
   align-items: center;
-  margin: 15px 0 10px 0;
+  margin: 16px 0 10px 0;
 }
 
 header .header__rhs i {
   top: 8px;
   left: 12px;
-  font-size: 1.8rem;
+  font-size: 2.3rem;
   position: absolute;
   color: #00000046;
 }
@@ -91,16 +92,17 @@ header .header__rhs i {
 header .header__rhs .searchField {
   height: 100%;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   border-radius: 15px;
   padding-bottom: 7px;
-  padding-left: 3.7rem;
+  padding-left: 4.2rem;
+  border: 2px solid #0000006c;
   box-shadow: 0 5px 5px rgba(0, 0, 0, .05);
 }
 
 header .header__rhs .searchField::placeholder {
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: #00000046;
 }
 
