@@ -26,10 +26,12 @@ body {
 header.header {
   top: 0;
   width: 100%;
-  padding: 5px;
   z-index: 100;
+  padding: 10px;
+  display: flex;
   max-width: 100vw;
   position: sticky;
+  align-items: center;
   background-color: #fdfdfd;
   box-shadow: 0 5px 5px rgba(0, 0, 0, .05);
 }
@@ -57,19 +59,19 @@ header .container .header__brand {
 }
 
 header .container .header__brand img {
-  width: 4.2rem;
-  height: 4.2rem;
+  width: 4.5rem;
+  height: 4.5rem;
 }
 
 header .container .header__brand h3 {
   margin-top: 3px;
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   font-weight: bold;
   font-style: italic;
 }
 
 header .container .menu__container {
-  top: 5px;
+  top: 8px;
   right: 2px;
   cursor: pointer;
   position: absolute;
@@ -87,7 +89,6 @@ header .container .header__rhs {
   position: relative;
   align-items: center;
   margin: 16px 0 10px 0;
-  background-color: maroon;
 }
 
 header .container .header__rhs i {
@@ -165,63 +166,44 @@ header .container .header__rhs.show {
 /* FIRST BREAKPOINT */
 @media screen and (min-width: 768px) {
   header.header {
-    flex-direction: row;
+    padding: 15px !important;
+  }
+
+  header .container {
     align-items: center;
-    padding: 10px 30px;
-    min-height: 12vh;
-    background-color: #ffc107;
+    flex-direction: row;
   }
 
-  header .header__brand {
-    margin-top: 0;
+  header .container .header__brand img {
+    width: 4.8rem;
+    height: 4.8rem;
   }
 
-  header .menu__container {
+  header .container .header__brand h3 {
+    font-size: 3rem;
+  }
+
+  header .container .menu__container {
     display: none;
   }
 
-  header .header__rhs {
-    display: flex;
+  header .container .header__rhs {
     margin: 0;
-    min-width: 250px;
-  }
-  
-  header .header__rhs i {
-    top: 13px;
-    left: 15px;
+    height: 4rem;
+    display: flex;
+    flex-basis: 50%;
   }
 
-  header .header__rhs .searchField {
-    padding-top: 8px;
+  header .container .header__rhs .searchField {
+    font-size: 2rem;
+    padding-left: 5rem;
+    padding-top: 5px;
     padding-bottom: 8px;
-    padding-left: 37px;
+    justify-content: flex-start;
   }
 
-  header .header__rhs .searchField::placeholder {
-    top: -1px;
-  }
-
-  header.header {
-    padding: 10px 40px;
-  }
-
-  header .header__brand img {
-    width: 40px;
-    height: 40px;
-  }
-  
-  header .header__brand h3 {
-    font-size: 30px;
-  }
-
-  header .header__rhs {
-    width: 400px;
-    max-width: 400px;
-  }
-
-  header .header__rhs .searchField {
-    border-radius: 18px;
-    padding-left: 36px;
+  header .container .header__rhs .searchField::placeholder {
+    font-size: 2rem;
   }
 }
 
