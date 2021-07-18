@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 const NavbarWithSearch = ({ placeholder, onChange }) => {
   const [ isToggled, setIsToggled ] = useState(false);
@@ -13,7 +12,7 @@ const NavbarWithSearch = ({ placeholder, onChange }) => {
   return (
     <header className="header">
       <div className="header__lhs">
-        <Link to="/" className="header__brand">
+        <a href="/" className="header__brand">
           <img 
             src={brand_logo} 
             alt="brand logo" width="45" height="45" 
@@ -21,7 +20,7 @@ const NavbarWithSearch = ({ placeholder, onChange }) => {
           />
 
           <h3>Gbedddu!</h3>
-        </Link>
+        </a>
       </div>
 
       <div className="menu__container">
