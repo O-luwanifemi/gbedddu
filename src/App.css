@@ -30,12 +30,13 @@ body {
  /* H E A D E R   S E C T I O N */
 header.header {
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 100;
   padding: 10px;
   display: flex;
+  position: fixed;
   max-width: 100vw;
-  position: sticky;
   align-items: center;
   background-color: #eed3d3;
   box-shadow: 0 5px 5px rgba(0, 0, 0, .05);
@@ -167,7 +168,7 @@ header .container .header__rhs.show {
 }
 
 
-/* FIRST BREAKPOINT */
+
 @media screen and (min-width: 660px) {
   header.header {
     padding: 15px !important;
