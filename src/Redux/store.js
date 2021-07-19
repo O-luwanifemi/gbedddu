@@ -1,4 +1,4 @@
-// FOR USE ONLY IN DEVELOPMENT
+// // FOR USE ONLY IN DEVELOPMENT
 // import { createStore, applyMiddleware } from 'redux';
 // import thunk from 'redux-thunk';
 // import logger from 'redux-logger';
