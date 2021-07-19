@@ -53,10 +53,10 @@ const TopSongs = () => {
     <>
       <NavbarWithSearch placeholder="Search a song" onChange={handleChange}/>
 
-      <main id="list_section">
+      <section id="list_section">
         {isLoading ? <Loader /> : 
           error ? <h2 className="fetchError_text">{error}</h2> :
-          <section className="list-group">
+          <div className="list-group">
             <h2 className="title">{title}</h2>
 
             <ul>
@@ -79,9 +79,9 @@ const TopSongs = () => {
                 )
               })}
             </ul>
-          </section>
+          </div>
         }
-      </main>
+      </section>
     </>
   )
 }
